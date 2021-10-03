@@ -1,6 +1,6 @@
 //**********************************
 	// API eklenir.
-	const telegram = require('telegram-bot-api')
+	const telegram = require('telegram-bot-api');
 
 	// Token eklenir.
 	const BOT_TOKEN = 'TOK:EN';
@@ -12,10 +12,10 @@
 			enabled: true,
 			get_interval: 1000
 		}
-	})
+	});
 
 	// Mesaj sağlayıcısı tanımlanır.
-	const mp = new telegram.GetUpdateMessageProvider()
+	const mp = new telegram.GetUpdateMessageProvider();
 
 	// Mesaj sağlayıcısı belirtilir ve API başlatılır.
 	api.setMessageProvider(mp)
@@ -23,7 +23,7 @@
 	.then(() => {
 		console.log('Bot başlatıldı.')
 	})
-	.catch(console.err) // Hata varsa yazdırılır.
+	.catch(console.err); // Hata varsa yazdırılır.
 
 	// "Message" gelirse çalışmasını istediğimiz fonksiyonu yazıyoruz.
 	api.on('update', (update) => {
@@ -46,6 +46,6 @@
 				// Mesaj gönderildikten sonra. veya bilgi alma da
 				console.log("Mesaj başarıyla yollandı.");
 			})
-			.catch(console.err)
+			.catch(console.err);
 		}
 	});
